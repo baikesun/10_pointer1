@@ -2,14 +2,20 @@
 
 int main(void)
 {
-	int i = 365;
-	int *ptr = &i;
+	int x = 10;
+	int y = 20;
+	int *ptr;
 	
-	printf("i address : %d\n", &i);
-	printf("i value : %d\n\n", i);
+	ptr = &x;
+	printf("ptr value : %d\n", *ptr);
 	
-	printf("ptr address : %d\n", ptr);
-	printf("ptr value : %d\n\n", *ptr);
+	ptr = &y;
+	printf("ptr value : %d\n", *ptr);
+	
+	ptr = &x;
+	*ptr = 20;
+	printf("x value : %d\n", x);
 	
 	return 0;
 }
+
