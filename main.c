@@ -2,20 +2,20 @@
 
 int main(void)
 {
-	int x = 10;
-	int y = 20;
+	int grade[5] = {10, 20, 30, 40, 50};
+	int average;
 	int *ptr;
 	
-	ptr = &x;
-	printf("ptr value : %d\n", *ptr);
+	int i;
 	
-	ptr = &y;
-	printf("ptr value : %d\n", *ptr);
+	ptr = grade;
 	
-	ptr = &x;
-	*ptr = 20;
-	printf("x value : %d\n", x);
+	for(i=0; i<5; i++)
+	{
+		average += *(ptr+i);   //ptr[i]
+	}
+	
+	printf("average : %d\n", average/5);
 	
 	return 0;
 }
-
